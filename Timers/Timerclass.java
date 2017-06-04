@@ -5,13 +5,16 @@ import java.util.TimerTask;
 
 import PluginReference.*;
 /**
-* This is used as a separate class in my Clock plugin.
-*/
+ * This is used as a separate class in my Clock plugin.
+ */
 public class Timerclass {
-	
-public Timerclass(){
-	
-}
+
+	/**
+	 * Create a Timerclass object.
+	 */
+	public Timerclass(){
+
+	}
 
 	public static MC_Server server = null;
 	/**
@@ -28,9 +31,9 @@ public Timerclass(){
 		Timer timer = new Timer();
 		int timeinterval = 1*60 * 1000;
 		timer.schedule(new TimerTask() {
-		  @Override
-		  public void run() {
-System.out.println("your timer is up!"); }
+			@Override
+			public void run() {
+				System.out.println("your timer is up!"); }
 		}, timeinterval);
 	}
 	/**
@@ -47,9 +50,9 @@ System.out.println("your timer is up!"); }
 		Timer timer = new Timer();
 		int timeinterval = 30*60 * 1000;
 		timer.schedule(new TimerTask() {
-		  @Override
-		  public void run() {
-System.out.println("your timer is up!"); }
+			@Override
+			public void run() {
+				System.out.println("your timer is up!"); }
 		}, timeinterval);
 	}
 	/**
@@ -66,9 +69,9 @@ System.out.println("your timer is up!"); }
 		Timer timer = new Timer();
 		int timeinterval = 1*60*60 * 1000;
 		timer.schedule(new TimerTask() {
-		  @Override
-		  public void run() {
-System.out.println("your timer is up!"); }
+			@Override
+			public void run() {
+				System.out.println("your timer is up!"); }
 		}, timeinterval);
 	}
 	/**
@@ -85,12 +88,12 @@ System.out.println("your timer is up!"); }
 		Timer timer = new Timer();
 		int timeinterval = 30*60 * 1000;
 		timer.schedule(new TimerTask() {
-		  @Override
-		  public void run() {
-			  plr.sendMessage("Your timer is up!");
-		  }
+			@Override
+			public void run() {
+				plr.sendMessage("Your timer is up!");
+			}
 		}, timeinterval);
-}
+	}
 	/**
 	 * This is the timer called by Clock v1.0+ when a player enters the /timerhour command
 	 * To use in your plugin, you can call onPlayerInput, register your command as normal then type:
@@ -105,12 +108,12 @@ System.out.println("your timer is up!"); }
 		Timer timer = new Timer();
 		int timeinterval = 1*60*60 * 1000;
 		timer.schedule(new TimerTask() {
-		  @Override
-		  public void run() {
-	plr.sendMessage("Your timer is up!");
-		  }
-}, timeinterval);
-		}
+			@Override
+			public void run() {
+				plr.sendMessage("Your timer is up!");
+			}
+		}, timeinterval);
+	}
 	/**
 	 * This is the timer called by Clock v1.0+ when a player enters the /timerminute command
 	 * To use in your plugin, you can call onPlayerInput, register your command as normal then type:
@@ -125,10 +128,10 @@ System.out.println("your timer is up!"); }
 		Timer timer = new Timer();
 		int timeinterval = 1*60 * 1000;
 		timer.schedule(new TimerTask() {
-		  @Override
-		  public void run() {
-plr.sendMessage("Your timer is up!"); }
+			@Override
+			public void run() {
+				plr.sendMessage("Your timer is up!"); }
 		}, timeinterval);
-		}
+	}
 }
 

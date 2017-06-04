@@ -5,18 +5,20 @@ import java.util.TimerTask;
 /**
  * A full set of customisable timers. Tell me if there is one you want that is not here.
  * Also added a 90 second timer as a quick option.
- *
  */
 public class customtimers {
-	
-public customtimers(){
-	
-}
-	
-/**
- * Runs a timer for (milliseconds) milliseconds.
- * @param milliseconds amount of milliseconds to run the timer for.
- */
+
+	/**
+	 * Creates a customtimers object.
+	 */
+	public customtimers(){
+
+	}
+
+	/**
+	 * Runs a timer for (milliseconds) milliseconds.
+	 * @param milliseconds amount of milliseconds to run the timer for.
+	 */
 	public void timermilliseconds(int milliseconds){
 		Timer timer = new Timer();
 		timer.schedule(new TimerTask(){
@@ -89,14 +91,14 @@ public customtimers(){
 	 * Runs a timer for 90 seconds.
 	 */
 	public void ninetysecondtimer(){
-			int Timeinterval = 90 * 1000;
-			Timer timer = new Timer();
-			timer.schedule(new TimerTask(){
-				@Override
-				public void run() {
-					System.out.println("Your timer is up!");
-				}
-			}, Timeinterval);
+		int Timeinterval = 90 * 1000;
+		Timer timer = new Timer();
+		timer.schedule(new TimerTask(){
+			@Override
+			public void run() {
+				System.out.println("Your timer is up!");
+			}
+		}, Timeinterval);
 	}
 	/**
 	 * Runs a timer for (milliseconds) milliseconds.
@@ -180,14 +182,14 @@ public customtimers(){
 	 * Timer repeats.
 	 */
 	public void ninetysecondtimerrepeating(){
-			int Timeinterval = 90 * 1000;
-			Timer timer = new Timer();
-			timer.scheduleAtFixedRate(new TimerTask(){
-				@Override
-				public void run() {
-					System.out.println("Your timer is up!");
-				}
-			}, Timeinterval, Timeinterval);
+		int Timeinterval = 90 * 1000;
+		Timer timer = new Timer();
+		timer.scheduleAtFixedRate(new TimerTask(){
+			@Override
+			public void run() {
+				System.out.println("Your timer is up!");
+			}
+		}, Timeinterval, Timeinterval);
 	}
-	
+
 }
